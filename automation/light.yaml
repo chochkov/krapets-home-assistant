@@ -1,0 +1,11 @@
+alias: Turn off light at 00:35 every night
+description: Automatically turn off a Shelly light every night at 00:35
+trigger:
+  - platform: time
+    at: "00:35:00"
+condition: []
+action:
+  - service: light.turn_off
+    target:
+      entity_id: light.shellypro3_ece334ed53a0_switch_2
+mode: single
